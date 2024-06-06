@@ -1,0 +1,46 @@
+/* General styles */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 16px;
+}
+
+body.body {
+  overflow-x: auto;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Styles needed for animation */
+.container-get-in-touch { /* hide cta button animation */
+  display: none;
+  transition: all 0.3s; /* Optional: adds a transition effect */
+}
+
+@media (min-width: 1024px) {
+  .container-nav-links { /* hide cta button animation move elements*/
+    margin-right: -9rem;
+    transition: all 0.3s; /* Optional: adds a transition effect */
+  }
+}
+
+.step-id-cont {
+  position: relative;
+  z-index: 1; /* Ensure it's above the lines */
+}
+
+.line {
+  position: absolute;
+  height: 1px;
+  background-color: var(--primary-blue-color);
+  z-index: 0; /* Ensure lines are below the steps */
+}
+
+.section-hero-int-cont .get-in-touch-button {
+  z-index: 100;
+}
